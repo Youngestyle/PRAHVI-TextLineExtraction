@@ -163,7 +163,7 @@ int MSERStates::smoothCost(int siteID1, int siteID2, int l1, int l2) {
 	double u_1_2 = stateDistance(l1, l2);
 
 	double s1_squared = pow(static_cast<double>(s1.scale.first) / static_cast<double>(s1.scale.second), 2);
-	double s2_squared = pow(static_cast<double>(s1.scale.first) / static_cast<double>(s1.scale.second), 2);
+	double s2_squared = pow(static_cast<double>(s2.scale.first) / static_cast<double>(s2.scale.second), 2);
 
 	return static_cast<int>(u_1_2 * exp(- (BETA * distance_squared_site1_site2) / ( s1_squared + s2_squared ) )); 
 }
